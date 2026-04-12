@@ -1,0 +1,128 @@
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-warm);
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ff-sans);
+}
+
+.cardList {
+  flex-direction: row;
+  height: 150px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(120, 60, 10, 0.13);
+}
+
+/* ── IMAGE ── */
+.imgWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--warm-bg);
+}
+
+.imgWrapList {
+  width: 150px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  display: block;
+}
+
+.card:hover .img {
+  transform: scale(1.06);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(20, 8, 2, 0.72);
+  color: #FFD49A;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* ── BODY ── */
+.body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bodyList {
+  padding: 12px 16px;
+  justify-content: center;
+}
+
+.name {
+  font-family: var(--ff-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.tag {
+  background: var(--tag-bg);
+  color: var(--accent);
+  border-radius: 100px;
+  padding: 3px 10px;
+  font-size: 11px;
+}
+
+/* ── FOOTER ── */
+.footer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border-warm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.viewBtn {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+}
+
+.rating {
+  font-size: 11px;
+  color: var(--text-light);
+}
